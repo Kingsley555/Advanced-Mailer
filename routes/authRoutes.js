@@ -11,12 +11,12 @@ router.get(
 
 router.get('/auth/google/callback', passport.authenticate('google'));
 
-router.get('/api/logout', (req, res) => {
-  req.logout();
+router.get('/api/current_user', (req, res) => {
   res.send(req.user);
 });
 
-router.get('/api/current_user', (req, res) => {
+router.get('/api/logout', (req, res) => {
+  req.logout();
   res.send(req.user);
 });
 
