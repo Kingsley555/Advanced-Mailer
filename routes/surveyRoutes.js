@@ -24,6 +24,8 @@ router.get('/api/surveys/:surveyId/:choice', (req, res) => {
 });
 
 router.post('/api/surveys/webhooks', (req, res) => {
+  // User this URL on Sendgrid.com during Development
+  // https://webhookkingsleyoha.localtunnel.me/api/surveys/webhooks
   const p = new Path('/api/surveys/:surveyId/:choice');
 
   _.chain(req.body)
